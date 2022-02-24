@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { SnackbarProvider } from 'notistack';
-import { GLOBAL_URL } from './utlis/URL';
 import axios from 'axios';
 import {
   BrowserRouter as Router,
 } from "react-router-dom";
 import 'animate.css';
+
+const GLOBAL_URL = "http://localhost:5000";
 
 // Axios : HTTP Client Global Configuration
 axios.defaults.baseURL = GLOBAL_URL;
