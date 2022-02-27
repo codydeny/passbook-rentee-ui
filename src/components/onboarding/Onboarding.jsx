@@ -96,7 +96,7 @@ export default function Onboarding(props) {
               e.preventDefault()
               setSubStep(2)
               setTimeout(()=>{
-                window.location.href = `https://fiu-uat.setu.co/consents/webview/${store.state.consent.consentResponse.url}`
+                window.location.href = `https://fiu-uat.setu.co/consents/webview/${store.state.consent.consentResponse.url``}`
                console.log(store.state.consent.consentResponse.url)
               }, 1000)
             }}
