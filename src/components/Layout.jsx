@@ -159,7 +159,7 @@ export default function Layout(props) {
           }}>
             
             {/* {animate__flash} */}
-          <Bolt className={`${animatePulse}`} style={{marginTop : '1px', fontSize : '1.8em'}}/> <span className="animate__animated text-gray-500 text-sans mt-1 ">PassBook</span>
+          <Bolt className={`${animatePulse}`} style={{marginTop : '1px', fontSize : '1.8em'}}/> <span className="animate__animated text-gray-500 text-sans mt-1 ">Rento</span>
           </span>
           {/* <IconButton
             sx={{
