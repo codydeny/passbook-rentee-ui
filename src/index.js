@@ -9,8 +9,7 @@ import {
   BrowserRouter as Router,
 } from "react-router-dom";
 import 'animate.css';
-
-const GLOBAL_URL = "http://localhost:5000";
+import { GLOBAL_URL } from './utlis/URL';
 
 // Axios : HTTP Client Global Configuration
 axios.defaults.baseURL = GLOBAL_URL;

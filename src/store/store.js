@@ -34,6 +34,39 @@ class StoreProvider extends React.Component {
       <StoreContext.Provider value = {{ 
         state: this.state,
 
+        submitForm : (e, extras={}) => {
+          e.preventDefault();
+          let formData = new FormData(e.target);
+          formData = Object.fromEntries(formData)
+          formData = {...formData, ...extras}
+          console.log(formData)
+        },
+
+        initConsent : async (mobile) => {
+          this.setState({ loading : true });
+          // /api/v1/consent/init
+          console.log(mobile)
+          await axios.post(`/api/v1/consent/init`, {
+            "phone_number": mobile,
+            "redirect_url": "https://passbook-rentee-ui.netlify.app/anumati"
+          }).then((res)=> {
+            this.setState({ loading : false });
+            this.setState({ consent : res.data });
+          })
+
+        },
+
+        getAgreeement : async (leaseId) => {
+          this.setState({ loading : true });
+          // /api/v1/consent/init
+          console.log(leaseId)
+          await axios.get(`/api/v1/lease/${leaseId}`).then((res)=> {
+            this.setState({ loading : false });
+            this.setState({ consent : res.data });
+          })
+
+        },
+
         addInProgressRentee : (rentee) => {
           this.setState({
             inProgressRentees : {

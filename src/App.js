@@ -18,6 +18,8 @@ import RenteeProfile from "./components/RenteeProfile";
 import InProgressRenteesDetail from "./components/InProgressRenteesDetail";
 import ConsentPage from "./views/ConsentPage";
 import AgreementPage from "./views/AgreementPage";
+import Onboarding from "./components/onboarding/Onboarding";
+import Profile from "./views/Profile";
 
 function App() {
   const location = useLocation();
@@ -108,8 +110,8 @@ function App() {
               <Route path="agreement/:id" element={<AgreementPage/>} />
               <Route path="incoming/:id/*" element={<InProgressRenteesDetail/>} />
               <Route path="/login" element={<Login/>} />
-              <Route path="/onboarding" element={<p>Onboarding</p>} />
-              <Route path="/onboarding" element={<p>Onboarding</p>} />
+              <Route path="/onboarding" element={<Onboarding/>} />
+              <Route path="/profile" element={<Profile/>} />
               <Route path="/" element={<RenteeProfile/>} />
           </Routes>
         </Layout>

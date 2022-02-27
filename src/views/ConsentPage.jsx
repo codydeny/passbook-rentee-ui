@@ -35,12 +35,12 @@ export default function ConsentPage() {
 
 <div class="p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700">
         <form class="space-y-6" action="#">
-        <h3 class="text-xl font-medium text-gray-900 dark:text-white">Provide Consent To Landlord</h3>
+        <h3 class="text-xl font-medium text-gray-900 dark:text-white">Provide Consent </h3>
         <ul role="list" class="my-7 space-y-5">
             <li class="flex space-x-3">
                
                 <PlayArrowIcon className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"/>
-                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Account Statements FY 2019</span>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">Account Statements of FY </span>
             </li>
             <li class="flex space-x-3">
                 <PlayArrowIcon className="flex-shrink-0 w-5 h-5 text-blue-600 dark:text-blue-500"/>

@@ -4,10 +4,16 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import GppMaybeIcon from '@mui/icons-material/GppMaybe';
 import { Alert } from '@mui/material';
 import { ArrowBackRounded, ArrowRight } from '@mui/icons-material';
+import useStore from '../utlis/customHooks/useStore';
 
 export default function AgreementPage() {
     let {id} = useParams();
     const [step, setStep] = React.useState(1)
+    const store = useStore()
+
+    React.useEffect(()=> {
+        store.getAgreeement(id)
+    }, [])
 
   return (<div className="my-5 mx-1">
 
@@ -70,7 +76,7 @@ export default function AgreementPage() {
                 </Alert> </p>
         </div>
 
-        <Link to="/" type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Go Back <ArrowRight/> </Link>
+        <Link to="/profile" type="button" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">Go Back <ArrowRight/> </Link>
         </div>}
     </div>
   )

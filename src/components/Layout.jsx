@@ -113,26 +113,26 @@ export default function Layout(props) {
     setOpen(false);
   };
 
-  if(window.location.pathname === '/login' || window.location.pathname === '/onboarding') {
-    return(<Box>
-      <IconButton
-        sx={{
-            position : 'absolute',
-            right : '0',
-            top : '0',
-            marginRight : '50px',
-            marginTop : '10px'
-          }}
-        edge="end"
-        color="inherit"
-        aria-label="open drawer"
-        onClick={props.changeTheme}
-      >
-        {props.theme === 'light' ? <ModeNightIcon/> : <LightModeOutlined/>}
-      </IconButton>
-      {props.children}
-    </Box>)
-  }
+  // if(window.location.pathname === '/login' || window.location.pathname === '/onboarding') {
+  //   return(<Box>
+  //     <IconButton
+  //       sx={{
+  //           position : 'absolute',
+  //           right : '0',
+  //           top : '0',
+  //           marginRight : '50px',
+  //           marginTop : '10px'
+  //         }}
+  //       edge="end"
+  //       color="inherit"
+  //       aria-label="open drawer"
+  //       onClick={props.changeTheme}
+  //     >
+  //       {props.theme === 'light' ? <ModeNightIcon/> : <LightModeOutlined/>}
+  //     </IconButton>
+  //     {props.children}
+  //   </Box>)
+  // }
 
   return (
     <Box sx={{ display: 'flex'}} className="container mx-auto flex flex-row justify-center">
